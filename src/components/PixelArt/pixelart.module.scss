@@ -1,0 +1,22 @@
+.frame {
+    height: 100vh !important;
+    image-rendering: pixelated;
+    overflow: hidden !important;
+}
+.box {
+    height: 50vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    font-family: Daydream;
+    font-size: 80px;
+    color: white;
+    align-self: center;
+}
+
+@font-face {
+    font-family: Daydream;
+    src: url(../../../public/assets/fonts/Daydream.ttf);
+  }

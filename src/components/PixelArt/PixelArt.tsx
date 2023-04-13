@@ -2,23 +2,38 @@ import React from 'react'
 import styles from './pixelart.module.scss'
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { BannerLayer } from 'react-scroll-parallax/dist/components/ParallaxBanner/types';
+import { Animator, ScrollContainer, ScrollPage, FadeOut } from "react-scroll-motion";
 
 const PixelArt = () => {
 
     const titleLayer: BannerLayer = {
         children: (
-          <div className={styles.box}>
-            <h1 className={styles.title}>
-                Hello World!
-            </h1>
-          </div>
+        <ScrollContainer>
+            <ScrollPage>
+                <Animator animation={FadeOut(1, -2)}>
+                    <div className={styles.box}>
+                        <h1 className={styles.title}>
+                            Parallax  
+                        </h1>
+                        <h1 className={styles.title}>
+                            Scrolling 
+                        </h1>
+                    </div>
+                </Animator>
+            </ScrollPage>
+        </ScrollContainer>
         ),
     };
 
     const gradiantLayer: BannerLayer = {
-        image: './assets/mountains_sunset/01_mountains1sunset.png',
+        // image: './assets/mountains_sunset/01_mountains1sunset.png',
         speed: -80,
-        expanded: false
+        expanded: false,
+        children: (
+            <div className={styles.gradiant}>
+
+            </div>
+        )
     }
     const starLayer: BannerLayer = {
         image: './assets/mountains_sunset/02_mountains1sunset.png',
@@ -28,7 +43,6 @@ const PixelArt = () => {
     const sunLayer: BannerLayer = {
         image: './assets/mountains_sunset/03_mountains1sunset.png',
         speed: -80,
-        translateY: [0, 5],
         expanded: false
     }
     const cloudLayer1: BannerLayer = {
@@ -40,7 +54,7 @@ const PixelArt = () => {
     const cloudLayer2: BannerLayer = {
         image: './assets/mountains_sunset/05_mountains1sunset.png',
         speed: -80,
-        translateX: [0, 10],
+        translateX: [0, -10],
         expanded: false
     }
     const cloudLayer3: BannerLayer = {
@@ -58,8 +72,7 @@ const PixelArt = () => {
     const cloudLayer5: BannerLayer = {
         image: './assets/mountains_sunset/08_mountains1sunset.png',
         speed: -80,
-        opacity: [1, 0.3],
-        translateX: [0, -10],
+        translateX: [0, 10],
         expanded: false
     }
     const cloudLayer6: BannerLayer = {
@@ -116,11 +129,11 @@ const PixelArt = () => {
                 starLayer,
                 sunLayer,
                 cloudLayer1,
-                cloudLayer2,
                 cloudLayer3,
                 cloudLayer4,
                 titleLayer, 
                 cloudLayer5,
+                cloudLayer2,
                 cloudLayer6,
                 mountainLayer1,
                 mountainLayer2, 

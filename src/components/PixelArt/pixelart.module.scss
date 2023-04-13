@@ -4,19 +4,31 @@
     overflow: hidden !important;
 }
 .box {
-    height: 50vh !important;
+    height: 55vh !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 1;
 }
 .title {
     font-family: Daydream;
-    font-size: 80px;
+    font-size: 85px;
     color: white;
     align-self: center;
 }
 
+h1 {
+    margin: 0;
+}
+
 @font-face {
     font-family: Daydream;
-    src: url(../../../public/assets/fonts/Daydream.ttf);
+    src: url(./assets/fonts/Daydream.ttf);
   }
+
+  .gradiant {
+    height: 50vh;
+    background: linear-gradient(#873B37, #AC5440);
+  }
+
+ // f35438e7

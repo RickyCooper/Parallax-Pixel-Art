@@ -26,7 +26,6 @@ const PixelArt = () => {
     };
 
     const gradiantLayer: BannerLayer = {
-        // image: './assets/mountains_sunset/01_mountains1sunset.png',
         speed: -80,
         expanded: false,
         children: (
